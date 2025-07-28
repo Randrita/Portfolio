@@ -43,7 +43,7 @@ export default function ProjectsComponent() {
                   </CardContent>
                   <CardFooter>
                       <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
-                          Learn More <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                          View Project <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                       </Button>
                   </CardFooter>
                 </Card>
