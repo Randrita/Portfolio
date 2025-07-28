@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Accordion,
   AccordionContent,
@@ -115,5 +117,3 @@ export default function ADKInstructions() {
     </div>
   )
 }
-
-    
