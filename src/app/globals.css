@@ -4,20 +4,20 @@
 
 @layer base {
   :root {
-    --background: 257 100% 98%; /* #F5F3FF - Soft Lavender */
-    --foreground: 0 0% 20%; /* #333333 */
+    --background: 257 100% 98%;
+    --foreground: 0 0% 20%;
     --card: 257 100% 98%;
     --card-foreground: 0 0% 20%;
     --popover: 257 100% 98%;
     --popover-foreground: 0 0% 20%;
-    --primary: 257 84% 67%; /* Soft Lavender */
+    --primary: 257 84% 67%;
     --primary-foreground: 257 30% 40%;
-    --secondary: 51 100% 50%; /* #FFD700 - Metallic Gold */
+    --secondary: 51 100% 50%;
     --secondary-foreground: 0 0% 10%;
     --muted: 257 100% 94%;
     --muted-foreground: 0 0% 40%;
-    --accent: 51 100% 50%; /* #FFD700 - Metallic Gold */
-    --accent-foreground: 0 0% 10%;
+    --accent: 257 84% 67%;
+    --accent-foreground: 257 30% 40%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 257 100% 90%;
@@ -37,13 +37,13 @@
     --card-foreground: 0 0% 95%;
     --popover: 240 10% 4%;
     --popover-foreground: 0 0% 95%;
-    --primary: 279 84% 67%; /* Lighter purple for dark mode */
+    --primary: 279 84% 67%;
     --primary-foreground: 279 84% 15%;
-    --secondary: 5 100% 75%; /* Lighter coral for dark mode */
+    --secondary: 5 100% 75%;
     --secondary-foreground: 5 100% 15%;
     --muted: 240 10% 12%;
     --muted-foreground: 0 0% 60%;
-    --accent: 5 100% 75%; /* Lighter coral for dark mode */
+    --accent: 5 100% 75%;
     --accent-foreground: 5 100% 15%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
