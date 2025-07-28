@@ -15,40 +15,42 @@ export default function PublicTalksComponent() {
   return (
     <section>
       <h2 className="text-3xl font-bold font-headline text-center mb-12">Public Talks</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
         {content.public_talks.map((talk, index) => {
           const TalkComponent = talk.component ? componentMap[talk.component] : null;
           const techStackArray = talk.techStack.split(', ');
           return (
             <Dialog key={index}>
               <DialogTrigger asChild>
-                <Card className="flex flex-col cursor-pointer group">
-                  <div className="overflow-hidden rounded-t-lg">
+                <Card className="flex flex-col md:flex-row cursor-pointer group overflow-hidden">
+                  <div className="md:w-1/3 overflow-hidden">
                     <Image 
                       src={talk.image} 
                       alt={talk.title} 
                       width={600} 
                       height={400} 
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
                       data-ai-hint={talk.hint}
                     />
                   </div>
-                  <CardHeader>
-                    <CardTitle>{talk.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow space-y-4">
-                    <p className="text-sm text-muted-foreground line-clamp-3">{talk.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {techStackArray.map(tech => (
-                          <Badge key={tech} variant="secondary">{tech}</Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                  <CardFooter>
-                      <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
-                          View Details <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                  </CardFooter>
+                  <div className="md:w-2/3 flex flex-col">
+                    <CardHeader>
+                      <CardTitle>{talk.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                      <p className="text-sm text-muted-foreground line-clamp-3">{talk.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {techStackArray.map(tech => (
+                            <Badge key={tech} variant="secondary">{tech}</Badge>
+                        ))}
+                      </div>
+                    </CardContent>
+                    <CardFooter>
+                        <Button variant="outline" className="w-full md:w-auto ml-auto group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                            View Details <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                    </CardFooter>
+                  </div>
                 </Card>
               </DialogTrigger>
               <DialogContent className="max-w-lg md:max-w-2xl">
