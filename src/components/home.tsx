@@ -31,7 +31,7 @@ export default function HomeComponent() {
           <AvatarFallback>{content.avatar.fallback}</AvatarFallback>
         </Avatar>
         <div className="text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl font-bold font-headline tracking-tight dark:text-primary">{content.name}</h1>
+          <h1 className="text-5xl sm:text-6xl font-signature tracking-tight dark:text-primary">{content.name}</h1>
           <p className="text-lg sm:text-xl text-muted-foreground mt-1">{content.tagline}</p>
           <div className="mt-4 flex justify-center md:justify-start gap-2">
             <Button variant="ghost" size="icon" asChild>
