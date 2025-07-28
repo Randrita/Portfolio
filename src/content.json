@@ -99,7 +99,8 @@
       "techStack": "OpenCV, Pytesseract, Numpy",
       "link": "https://github.com/Randrita/recognAIse",
       "image": "https://placehold.co/600x400.png",
-      "hint": "document analysis"
+      "hint": "document analysis",
+      "component": "RecognAIse"
     },
     {
       "title": "Face Mesh App",
