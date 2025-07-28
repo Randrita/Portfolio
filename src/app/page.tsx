@@ -21,7 +21,7 @@ export default function PortfolioPage() {
       </header>
       <main className="container mx-auto px-4 pb-12">
         <Tabs defaultValue="home" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto">
+          <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto bg-transparent">
             <TabsTrigger value="home">HOME</TabsTrigger>
             <TabsTrigger value="projects">Projects</TabsTrigger>
             <TabsTrigger value="blogs">Blogs</TabsTrigger>
