@@ -4,6 +4,7 @@ import ProjectsComponent from '@/components/projects';
 import BlogsComponent from '@/components/blogs';
 import content from '@/content.json';
 import { ThemeSwitcher } from '@/components/theme-switcher';
+import PublicTalksComponent from '@/components/public-talks';
 
 export default function PortfolioPage() {
   return (
@@ -21,10 +22,11 @@ export default function PortfolioPage() {
       </header>
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <Tabs defaultValue="home" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 max-w-sm mx-auto bg-transparent">
+          <TabsList className="grid w-full grid-cols-4 max-w-md mx-auto bg-transparent">
             <TabsTrigger value="home">HOME</TabsTrigger>
             <TabsTrigger value="projects">Projects</TabsTrigger>
             <TabsTrigger value="blogs">Blogs</TabsTrigger>
+            <TabsTrigger value="talks">Public Talks</TabsTrigger>
           </TabsList>
           <TabsContent value="home" className="mt-8">
             <HomeComponent />
@@ -34,6 +36,9 @@ export default function PortfolioPage() {
           </TabsContent>
           <TabsContent value="blogs" className="mt-8">
             <BlogsComponent />
+          </TabsContent>
+          <TabsContent value="talks" className="mt-8">
+            <PublicTalksComponent />
           </TabsContent>
         </Tabs>
       </main>
