@@ -1,8 +1,26 @@
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Instagram, Cpu, Database, Code, Cloud, BrainCircuit, BarChart, Server } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import content from '@/content.json';
+
+const skillIcons: { [key: string]: React.ReactNode } = {
+  "Python": <Code className="h-5 w-5" />,
+  "PySpark": <Cpu className="h-5 w-5" />,
+  "DBMS (SQL)": <Database className="h-5 w-5" />,
+  "Unix Tools": <Server className="h-5 w-5" />,
+  "Unix Shell Scripting": <Code className="h-5 w-5" />,
+  "Java": <Code className="h-5 w-5" />,
+  "Git": <Github className="h-5 w-5" />,
+  "EDA": <BarChart className="h-5 w-5" />,
+  "Machine Learning": <BrainCircuit className="h-5 w-5" />,
+  "Power BI": <BarChart className="h-5 w-5" />,
+  "Deep Learning (CNN)": <BrainCircuit className="h-5 w-5" />,
+  "Kafka": <Server className="h-5 w-5" />,
+  "Spark Streaming": <Cpu className="h-5 w-5" />,
+  "GCP": <Cloud className="h-5 w-5" />,
+  "AI": <BrainCircuit className="h-5 w-5" />
+};
 
 export default function HomeComponent() {
   return (
@@ -17,16 +35,13 @@ export default function HomeComponent() {
           <p className="text-xl text-muted-foreground mt-1">{content.tagline}</p>
           <div className="mt-4 flex justify-center md:justify-start gap-2">
             <Button variant="ghost" size="icon" asChild>
-              <a href={`mailto:${content.contact.email}`} aria-label="Email"><Mail className="h-5 w-5" /></a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href={`tel:${content.contact.phone}`} aria-label="Phone"><Phone className="h-5 w-5" /></a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
               <a href={content.contact.github} target="_blank" rel="noopener noreferrer" aria-label="Github"><Github className="h-5 w-5" /></a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a href={content.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin className="h-5 w-5" /></a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a href={content.contact.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram className="h-5 w-5" /></a>
             </Button>
           </div>
         </div>
@@ -55,7 +70,10 @@ export default function HomeComponent() {
           </CardHeader>
           <CardContent className="flex flex-wrap gap-2">
             {content.skills.map(skill => (
-              <div key={skill} className="bg-primary/10 text-primary font-medium text-sm px-3 py-1 rounded-full">{skill}</div>
+              <div key={skill} className="flex items-center gap-2 bg-primary/10 text-primary font-medium text-sm px-3 py-1 rounded-full">
+                {skillIcons[skill] || <Code className="h-5 w-5" />}
+                <span>{skill}</span>
+              </div>
             ))}
           </CardContent>
         </Card>

@@ -8,19 +8,14 @@
     "hint": "professional portrait"
   },
   "contact": {
-    "email": "randritas@gmail.com",
-    "phone": "+917980773303",
     "github": "https://github.com/Randrita",
-    "linkedin": "https://www.linkedin.com/in/randritas"
+    "linkedin": "https://www.linkedin.com/in/randritas",
+    "instagram": "https://www.instagram.com/randrita_sarkar/"
   },
   "education": [
     {
       "institution": "B.P. Poddar Institute of Management and Technology",
       "details": "B.Tech in Information Technology | CGPA: 9.38/10 | 2019 - 2023"
-    },
-    {
-      "institution": "Dum Dum Road Govt. Sponsored High School for Girls",
-      "details": "WBCHSE (Class XII), Aggregate: 72% | 2016 - 2018\nWBBSE (Class X), Aggregate: 88% | 2015 - 2016"
     }
   ],
   "skills": [
@@ -36,7 +31,9 @@
     "Power BI",
     "Deep Learning (CNN)",
     "Kafka",
-    "Spark Streaming"
+    "Spark Streaming",
+    "GCP",
+    "AI"
   ],
   "experience": [
     {
