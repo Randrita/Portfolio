@@ -5,10 +5,16 @@ import { Button } from './ui/button';
 import content from '@/content.json';
 import ADKInstructions from './adk-instructions';
 import RecognAIseComponent from './recognAIse';
+import FaceMeshAppComponent from './face-mesh-app';
+import DocSearchEngineComponent from './doc-search-engine';
+import ShipTrackingComponent from './ship-tracking';
 
 const componentMap: { [key: string]: React.ComponentType } = {
   ADKInstructions,
   RecognAIse: RecognAIseComponent,
+  FaceMeshApp: FaceMeshAppComponent,
+  DocSearchEngine: DocSearchEngineComponent,
+  ShipTracking: ShipTrackingComponent,
 };
 
 export default function ProjectsComponent() {

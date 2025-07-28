@@ -99,7 +99,8 @@
       "techStack": "OpenCV, Numpy, Mediapipe, Streamlit",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
-      "hint": "facial recognition"
+      "hint": "facial recognition",
+      "component": "FaceMeshApp"
     },
     {
       "title": "Document Search Engine Over Private Networks",
@@ -107,7 +108,8 @@
       "techStack": "Python, Flask, Elasticsearch",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
-      "hint": "search engine"
+      "hint": "search engine",
+      "component": "DocSearchEngine"
     },
     {
       "title": "Ship Identification and Tracking via Satellite Imagery",
@@ -115,7 +117,8 @@
       "techStack": "Python, TensorFlow/Keras, OpenCV",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
-      "hint": "satellite imagery"
+      "hint": "satellite imagery",
+      "component": "ShipTracking"
     }
   ],
   "public_talks": [

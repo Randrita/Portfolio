@@ -4,11 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from './ui/button';
 import content from '@/content.json';
 import ADKInstructions from './adk-instructions';
-import RecognAIseComponent from './recognAIse';
 
 const componentMap: { [key: string]: React.ComponentType } = {
   ADKInstructions,
-  RecognAIse: RecognAIseComponent,
 };
 
 export default function PublicTalksComponent() {
