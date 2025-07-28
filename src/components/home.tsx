@@ -50,16 +50,19 @@ export default function HomeComponent() {
       <section>
         <Card>
           <CardHeader>
-            <CardTitle>Work Timeline</CardTitle>
+            <CardTitle>Work Experience</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
-            {content.experience.map((exp, index) => (
-              <div key={index}>
-                <h3 className="font-semibold">{exp.company}</h3>
-                <p className="text-sm text-muted-foreground">{exp.role} | {exp.duration}</p>
-                <p className="mt-1 text-sm sm:text-base">{exp.description}</p>
-              </div>
-            ))}
+          <CardContent>
+            <div className="relative pl-6 before:absolute before:inset-y-0 before:w-px before:bg-border before:left-0">
+              {content.experience.map((exp, index) => (
+                <div key={index} className="relative pl-8 pb-8 last:pb-0">
+                   <div className="absolute w-3 h-3 rounded-full bg-primary -left-[30px] ring-4 ring-background"></div>
+                   <h3 className="font-semibold text-base sm:text-lg">{exp.company}</h3>
+                   <p className="text-sm text-muted-foreground">{exp.role} | {exp.duration}</p>
+                   {exp.description && <p className="mt-1 text-sm sm:text-base">{exp.description}</p>}
+                </div>
+              ))}
+            </div>
           </CardContent>
         </Card>
       </section>
