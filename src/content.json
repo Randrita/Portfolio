@@ -86,7 +86,7 @@
   "projects": [
     {
       "title": "recognAIse",
-      "description": "An Optical Character Recognition (OCR) based web-application that can convert hand-written documents into digital text with an automatic annotation feature to enable a seamless and hassle-free digital document management. This project was chosen as one of the best projects in 'HACKODISHA' and won the title of 'BEST GIRLS TEAM'.",
+      "description": "An Optical Character Recognition (OCR) based web-application that can convert hand-written documents into digital text with an automatic annotation feature to enable a seamless and hassle-free digital document management. This project was chosen as one of the best projects in 'HACKODISHA' and won the title of 'BEST GIRLS TEAM'. It was also featured in the official weekly round-up of STREAMLIT.",
       "techStack": "OpenCV, Pytesseract, Numpy",
       "link": "https://github.com/Randrita/recognAIse",
       "image": "https://placehold.co/600x400.png",
@@ -95,7 +95,7 @@
     },
     {
       "title": "Face Mesh App",
-      "description": "A web application that creates mask effects and provides retouching over a 'face mesh'. Users can verify this mesh by uploading photos or videos, or by using their camera directly. This project was featured in the official weekly round-up of STREAMLIT.",
+      "description": "A computer vision project that creates mask effects and provides retouching over a 'face mesh'. Users can verify this mesh by uploading their own photos or videos, or by using their camera directly. This project was featured in the official weekly round-up of STREAMLIT.",
       "techStack": "OpenCV, Numpy, Mediapipe, Streamlit",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
@@ -104,7 +104,7 @@
     },
     {
       "title": "Document Search Engine Over Private Networks",
-      "description": "An enterprise search engine for documents on a private network. It features whitelisted directory indexing and near real-time document search, automatically correlating files by type for a seamless experience.",
+      "description": "An enterprise search engine for documents on a private network, featuring whitelisted directory indexing and near real-time document search. It automatically correlates files by type, providing a seamless experience without needing an active internet connection.",
       "techStack": "Python, Flask, Elasticsearch",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
@@ -113,7 +113,7 @@
     },
     {
       "title": "Ship Identification and Tracking via Satellite Imagery",
-      "description": "Analyzes ocean satellite imagery to detect and track ships. This project uses a Convolutional Neural Network (CNN) built from scratch, without transfer learning.",
+      "description": "A deep learning project to analyze ocean satellite imagery for ship detection and tracking. This project uses a Convolutional Neural Network (CNN) trained from scratch on the Kaggle dataset 'Satellite-imagery-of-ships'.",
       "techStack": "Python, TensorFlow/Keras, OpenCV",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
