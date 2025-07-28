@@ -46,7 +46,7 @@ const steps = [
 
 export default function ADKInstructions() {
   const [activeStep, setActiveStep] = React.useState(0);
-  const [completedSteps, setCompletedSteps] = React.useState<number[]>([]);
+  const [completedSteps, setCompletedSteps] = React.useState<number[]>([0]);
   const [copiedCode, setCopiedCode] = React.useState<string | null>(null);
 
   const handleStepToggle = (index: number) => {
@@ -68,14 +68,14 @@ export default function ADKInstructions() {
     });
   };
 
-  const progress = 100;
+  const progress = (completedSteps.length / steps.length) * 100;
 
   return (
     <div className="w-full space-y-6 p-2">
        <div>
         <div className="flex justify-between items-center mb-2">
             <span className="text-sm font-medium text-muted-foreground">Progress</span>
-            <span className="text-sm font-bold text-primary">{progress}%</span>
+            <span className="text-sm font-bold text-primary">{Math.round(progress)}%</span>
         </div>
         <Progress value={progress} className="w-full h-2" />
       </div>
@@ -96,7 +96,7 @@ export default function ADKInstructions() {
               onClick={() => handleStepToggle(index)}
             >
               <div className="flex items-center gap-4">
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold ${completedSteps.includes(index) || activeStep === index ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-lg font-bold ${completedSteps.includes(index) ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
                     {completedSteps.includes(index) ? <CheckCircle className="w-5 h-5" /> : index + 1}
                 </div>
                 <span className="flex-1 font-semibold text-base">{step.title}</span>
