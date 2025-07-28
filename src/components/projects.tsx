@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from './ui/button';
@@ -30,16 +29,6 @@ export default function ProjectsComponent() {
           return (
             <Dialog key={index}>
               <Card className="flex flex-col">
-                <div className="overflow-hidden rounded-t-lg">
-                  <Image 
-                    src={project.image} 
-                    alt={project.title} 
-                    width={600} 
-                    height={400} 
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" 
-                    data-ai-hint={project.hint}
-                  />
-                </div>
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
                 </CardHeader>
