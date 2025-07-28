@@ -5,11 +5,11 @@
 @layer base {
   :root {
     --background: 257 100% 98%; /* #F5F3FF */
-    --foreground: 240 4% 20%; /* #333333 */
+    --foreground: 0 0% 20%; /* #333333 */
     --card: 257 100% 98%;
-    --card-foreground: 240 4% 20%;
+    --card-foreground: 0 0% 20%;
     --popover: 257 100% 98%;
-    --popover-foreground: 240 4% 20%;
+    --popover-foreground: 0 0% 20%;
     --primary: 279 84% 37%; /* #6A0DAD */
     --primary-foreground: 0 0% 98%;
     --secondary: 5 100% 69%; /* #FF6F61 */
