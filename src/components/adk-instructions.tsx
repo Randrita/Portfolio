@@ -9,7 +9,7 @@ import {
 import { Button } from "./ui/button";
 import { Progress } from "./ui/progress";
 import React from "react";
-import { CheckCircle, ExternalLink } from "lucide-react";
+import { CheckCircle, ExternalLink, Copy, Check } from "lucide-react";
 
 const steps = [
   {
@@ -47,6 +47,7 @@ const steps = [
 export default function ADKInstructions() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [completedSteps, setCompletedSteps] = React.useState<number[]>([]);
+  const [copiedCode, setCopiedCode] = React.useState<string | null>(null);
 
   const handleStepToggle = (index: number) => {
     const isOpening = activeStep !== index;
@@ -58,6 +59,13 @@ export default function ADKInstructions() {
     } else {
       setActiveStep(-1);
     }
+  };
+  
+  const handleCopy = (code: string) => {
+    navigator.clipboard.writeText(code).then(() => {
+      setCopiedCode(code);
+      setTimeout(() => setCopiedCode(null), 2000);
+    });
   };
 
   const progress = 100;
@@ -98,9 +106,24 @@ export default function ADKInstructions() {
               <div className="prose prose-sm max-w-none dark:prose-invert pl-12 space-y-4">
                 <p>{step.content}</p>
                 {step.code && (
-                  <pre className="bg-muted p-4 rounded-md overflow-x-auto">
-                    <code>{step.code}</code>
-                  </pre>
+                  <div className="relative">
+                    <pre className="bg-muted p-4 pr-12 rounded-md overflow-x-auto">
+                      <code>{step.code}</code>
+                    </pre>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="absolute top-2 right-2 h-8 w-8 text-muted-foreground hover:bg-background/80"
+                      onClick={() => handleCopy(step.code as string)}
+                    >
+                      {copiedCode === step.code ? (
+                        <Check className="h-4 w-4 text-primary" />
+                      ) : (
+                        <Copy className="h-4 w-4" />
+                      )}
+                      <span className="sr-only">Copy code</span>
+                    </Button>
+                  </div>
                 )}
                 {step.link && (
                    <Button asChild className="mt-2" variant="outline">
