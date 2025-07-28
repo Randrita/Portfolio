@@ -28,26 +28,26 @@ export default function ProjectsComponent() {
           const techStackArray = project.techStack.split(', ');
           return (
             <Dialog key={index}>
-              <Card className="flex flex-col">
-                <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow space-y-4">
-                  <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
-                   <div className="flex flex-wrap gap-2">
-                    {techStackArray.map(tech => (
-                        <Badge key={tech} variant="secondary">{tech}</Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" className="w-full">
-                        Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </DialogTrigger>
-                </CardFooter>
-              </Card>
+              <DialogTrigger asChild>
+                <Card className="flex flex-col cursor-pointer group">
+                  <CardHeader>
+                    <CardTitle>{project.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow space-y-4">
+                    <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
+                     <div className="flex flex-wrap gap-2">
+                      {techStackArray.map(tech => (
+                          <Badge key={tech} variant="secondary">{tech}</Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                      <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                          Learn More <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                  </CardFooter>
+                </Card>
+              </DialogTrigger>
               <DialogContent className="max-w-lg md:max-w-2xl">
                 <DialogHeader>
                   <DialogTitle>{project.title}</DialogTitle>
