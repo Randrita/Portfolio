@@ -48,23 +48,36 @@ export default function HomeComponent() {
       </section>
 
       <section>
-        <Card>
-          <CardHeader>
-            <CardTitle>Work Experience</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="relative pl-6 before:absolute before:inset-y-0 before:w-px before:bg-border before:left-0">
-              {content.experience.map((exp, index) => (
-                <div key={index} className="relative pl-8 pb-8 last:pb-0">
-                   <div className="absolute w-3 h-3 rounded-full bg-primary -left-[30px] ring-4 ring-background"></div>
-                   <h3 className="font-semibold text-base sm:text-lg">{exp.company}</h3>
-                   <p className="text-sm text-muted-foreground">{exp.role} | {exp.duration}</p>
-                   {exp.description && <p className="mt-1 text-sm sm:text-base">{exp.description}</p>}
+        <h2 className="text-3xl font-bold font-headline text-center mb-2">Work Experience</h2>
+        <p className="text-center text-muted-foreground mb-12">My professional journey and key roles over the years.</p>
+        <div className="relative">
+          <div className="absolute left-1/2 -translate-x-1/2 w-px bg-border h-full" aria-hidden="true"></div>
+          <div className="space-y-12">
+            {content.experience.map((exp, index) => (
+              <div key={index} className="relative flex items-center justify-center">
+                <div className={`w-5/12 ${index % 2 === 0 ? 'order-1 text-right' : 'order-3 text-left'}`}>
+                  <Card className={`${index % 2 === 0 ? 'mr-8' : 'ml-8'}`}>
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-lg font-semibold">{exp.role}</CardTitle>
+                      <CardDescription>{exp.company} | {exp.duration}</CardDescription>
+                    </CardHeader>
+                    {exp.description && (
+                      <CardContent>
+                        <p className="text-sm">{exp.description}</p>
+                      </CardContent>
+                    )}
+                  </Card>
                 </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+                <div className="w-10 order-2 flex-shrink-0 flex items-center justify-center">
+                   <div className="w-3 h-3 rounded-full bg-primary ring-4 ring-background z-10"></div>
+                </div>
+                <div className={`w-5/12 text-sm text-muted-foreground ${index % 2 === 0 ? 'order-3 text-left' : 'order-1 text-right'}`}>
+                  <p className={`${index % 2 === 0 ? 'ml-8' : 'mr-8'}`}>{exp.duration}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
