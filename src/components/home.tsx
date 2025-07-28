@@ -24,15 +24,15 @@ const skillIcons: { [key: string]: React.ReactNode } = {
 
 export default function HomeComponent() {
   return (
-    <div className="space-y-12">
-      <section className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-        <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-secondary">
+    <div className="space-y-8 sm:space-y-12">
+      <section className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
+        <Avatar className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 border-4 border-secondary">
           <AvatarImage src={content.avatar.src} alt={content.avatar.alt} data-ai-hint={content.avatar.hint} />
           <AvatarFallback>{content.avatar.fallback}</AvatarFallback>
         </Avatar>
         <div className="text-center md:text-left">
-          <h1 className="text-4xl font-bold font-headline tracking-tight">{content.name}</h1>
-          <p className="text-xl text-muted-foreground mt-1">{content.tagline}</p>
+          <h1 className="text-3xl sm:text-4xl font-bold font-headline tracking-tight">{content.name}</h1>
+          <p className="text-lg sm:text-xl text-muted-foreground mt-1">{content.tagline}</p>
           <div className="mt-4 flex justify-center md:justify-start gap-2">
             <Button variant="ghost" size="icon" asChild>
               <a href={content.contact.github} target="_blank" rel="noopener noreferrer" aria-label="Github"><Github className="h-5 w-5" /></a>
@@ -57,14 +57,14 @@ export default function HomeComponent() {
               <div key={index}>
                 <h3 className="font-semibold">{exp.company}</h3>
                 <p className="text-sm text-muted-foreground">{exp.role} | {exp.duration}</p>
-                <p className="mt-1">{exp.description}</p>
+                <p className="mt-1 text-sm sm:text-base">{exp.description}</p>
               </div>
             ))}
           </CardContent>
         </Card>
       </section>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
         <section>
         <Card className="h-full">
             <CardHeader>
@@ -79,7 +79,7 @@ export default function HomeComponent() {
                   <div className="flex-grow">
                     <h3 className="font-semibold">{edu.institution}</h3>
                     <p className="text-sm">{edu.degree}</p>
-                    <div className="flex justify-between text-sm text-muted-foreground mt-1">
+                    <div className="flex flex-col sm:flex-row justify-between text-sm text-muted-foreground mt-1">
                       <span>{edu.grade}</span>
                       <span>{edu.duration}</span>
                     </div>
@@ -97,7 +97,7 @@ export default function HomeComponent() {
             </CardHeader>
             <CardContent className="flex flex-wrap gap-2">
               {content.skills.map(skill => (
-                <div key={skill} className="flex items-center gap-2 bg-primary/10 text-primary-foreground dark:bg-[#6A0DAD]/70 dark:text-white font-medium text-sm px-3 py-1 rounded-full transition-colors hover:bg-secondary hover:text-secondary-foreground dark:hover:bg-[#580A8D]">
+                <div key={skill} className="flex items-center gap-2 bg-primary/10 text-primary-foreground dark:bg-[#6A0DAD]/70 dark:text-white font-medium text-sm px-3 py-1.5 rounded-full transition-colors hover:bg-secondary hover:text-secondary-foreground dark:hover:bg-[#580A8D]">
                   {skillIcons[skill] || <Code className="h-5 w-5" />}
                   <span>{skill}</span>
                 </div>
@@ -113,7 +113,7 @@ export default function HomeComponent() {
             <CardTitle>Achievements</CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+            <ul className="list-disc list-inside text-muted-foreground space-y-2 text-sm sm:text-base">
               {content.achievements.map((achievement, index) => (
                 <li key={index}>{achievement}</li>
               ))}
@@ -130,7 +130,7 @@ export default function HomeComponent() {
           <CardContent className="space-y-4">
             {content.publications.map((pub, index) => (
               <div key={index}>
-                <h3 className="font-semibold">{pub.title}</h3>
+                <h3 className="font-semibold text-base sm:text-lg">{pub.title}</h3>
                 <p className="text-sm text-muted-foreground">{pub.conference || pub.doi}</p>
                 {pub.link && (
                   <Button variant="link" className="p-0 h-auto mt-1" asChild>

@@ -9,7 +9,7 @@ export default function ProjectsComponent() {
   return (
     <section>
       <h2 className="text-3xl font-bold font-headline text-center mb-8">My Work</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {content.projects.map((project, index) => (
           <Dialog key={index}>
             <DialogTrigger asChild>
@@ -32,7 +32,7 @@ export default function ProjectsComponent() {
                 </CardContent>
               </Card>
             </DialogTrigger>
-            <DialogContent className="max-w-2xl">
+            <DialogContent className="max-w-lg md:max-w-2xl">
               <DialogHeader>
                 <DialogTitle>{project.title}</DialogTitle>
               </DialogHeader>
