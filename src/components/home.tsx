@@ -50,7 +50,7 @@ export default function HomeComponent() {
       <section>
         <Card>
           <CardHeader>
-            <CardTitle>Experience</CardTitle>
+            <CardTitle>Work Timeline</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             {content.experience.map((exp, index) => (
