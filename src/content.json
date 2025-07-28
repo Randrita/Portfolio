@@ -1,3 +1,4 @@
+
 {
   "name": "Randrita Sarkar",
   "tagline": "A young mind ready to embrace a steep learning curve.",
@@ -127,6 +128,7 @@
       "description": "Step-by-step instructions on deploying an AI application using the App Development Kit (ADK) and Cloud Run.",
       "techStack": "ADK, Google Cloud Run, Genkit",
       "link": "#",
+      "slides_link": "#",
       "image": "https://placehold.co/600x400.png",
       "hint": "cloud deployment",
       "component": "ADKInstructions"
