@@ -1,6 +1,6 @@
 {
   "name": "Randrita Sarkar",
-  "tagline": "A young mind ready to face a learning curve",
+  "tagline": "A young mind ready to embrace a steep learning curve",
   "avatar": {
     "src": "https://placehold.co/200x200.png",
     "alt": "Randrita Sarkar",
@@ -24,30 +24,41 @@
     }
   ],
   "skills": [
-    "Python", "PySpark", "DBMS(SQL)", "Unix Tools", "Unix Shell Scripting", "Java",
-    "Git", "EDA", "Machine Learning", "Power BI", "Deep Learning (CNN)", "Kafka", "Spark Streaming"
+    "Python",
+    "PySpark",
+    "DBMS (SQL)",
+    "Unix Tools",
+    "Unix Shell Scripting",
+    "Java",
+    "Git",
+    "EDA",
+    "Machine Learning",
+    "Power BI",
+    "Deep Learning (CNN)",
+    "Kafka",
+    "Spark Streaming"
   ],
   "experience": [
     {
       "company": "Tata Consultancy Services",
       "role": "Assistant System Engineer",
       "duration": "Feb 2024 - Aug 2024",
-      "description": "Responsible in developing seamless query tool using servicenow."
+      "description": "Responsible for developing a seamless query tool using ServiceNow."
     },
     {
       "company": "Statts CyberSecurity Solutions",
       "role": "Data Analyst",
       "duration": "Feb 2023 - Feb 2024",
-      "description": "Responsible in performing exploratory data analysis using python libraries, power BI and MS Excel."
+      "description": "Performed exploratory data analysis using Python libraries, Power BI, and MS Excel."
     }
   ],
   "achievements": [
-    "Secured 1st runner-up position in HackFest 2022 organised by IIT(ISM) Dhanbad.",
-    "Secured 1st runner-up position in Technovation 2022 organised by Heritage Institute of Technology, Kolkata.",
-    "Secured 2nd runner-up position in YOUNG ENGINEERS AWARD 2022 organised by IET Kolkata Local Network.",
-    "Selected as a Problem Setter for the inter college coding competition, SMARTCODER 2.22.",
-    "Invited as a Speaker multiple times by GOOGLE DEVELOPERS GROUPS.",
-    "Secured 1st position Twice in intra-college poster making competition."
+    "Secured 1st runner-up position in HackFest 2022 organized by IIT (ISM) Dhanbad.",
+    "Secured 1st runner-up position in Technovation 2022 organized by Heritage Institute of Technology, Kolkata.",
+    "Secured 2nd runner-up position in YOUNG ENGINEERS AWARD 2022 organized by IET Kolkata Local Network.",
+    "Selected as a Problem Setter for the inter-college coding competition, SMARTCODER 2.22.",
+    "Invited as a Speaker multiple times by Google Developer Groups.",
+    "Secured 1st position twice in intra-college poster making competitions."
   ],
   "publications": [
     {
@@ -63,15 +74,15 @@
   "projects": [
     {
       "title": "recognAIse",
-      "description": "Web application converting handwritten documents to digital copy with automatic annotation feature to enable seemless and hassle free digital document management. The project was chosen as one of the best project in “HACKODISHA” and won the title of “BEST GIRLS TEAM”",
-      "techStack": "OpenCV, Pytessaract, Numpy",
+      "description": "A web application that converts handwritten documents into digital text with an automatic annotation feature to enable seamless and hassle-free digital document management. This project was chosen as one of the best projects in “HACKODISHA” and won the title of “BEST GIRLS TEAM”",
+      "techStack": "OpenCV, Pytesseract, Numpy",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
       "hint": "document analysis"
     },
     {
       "title": "Face Mesh App",
-      "description": "A web application, creating mask effects and retouching over a 'face mesh'. Users may verify this mesh by uploading photos or videos, as well as by turning on their camera directly. The project is added in official weekly round-up of STREAMLIT.",
+      "description": "A web application that creates mask effects and provides retouching over a 'face mesh'. Users can verify this mesh by uploading photos or videos, or by using their camera directly. This project was featured in the official weekly round-up of STREAMLIT.",
       "techStack": "OpenCV, Numpy, Mediapipe, Streamlit",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
@@ -79,7 +90,7 @@
     },
     {
       "title": "Document Search Engine Over Private Networks",
-      "description": "An enterprise network document search engine. Whitelisted directory indexing in an enterprise network and near real-time documents search. It auto-correlates files based on their type in order to give a seamless experience while searching documents in a large network.",
+      "description": "An enterprise search engine for documents on a private network. It features whitelisted directory indexing and near real-time document search, automatically correlating files by type for a seamless experience.",
       "techStack": "Python, Flask, Elasticsearch",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
@@ -87,7 +98,7 @@
     },
     {
       "title": "Ship Identification and Tracking via Satellite Imagery",
-      "description": "Ocean images are analysed to track ships over satellite images. Convolutional Neural Network (CNNs) are used purely without any transfer learning for detection.",
+      "description": "Analyzes ocean satellite imagery to detect and track ships. This project uses a Convolutional Neural Network (CNN) built from scratch, without transfer learning.",
       "techStack": "Python, TensorFlow/Keras, OpenCV",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
