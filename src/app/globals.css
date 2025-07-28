@@ -16,8 +16,8 @@
     --secondary-foreground: 0 0% 10%;
     --muted: 257 100% 94%;
     --muted-foreground: 0 0% 40%;
-    --accent: 51 100% 50%; /* #FFD700 */
-    --accent-foreground: 51 100% 10%;
+    --accent: 5 100% 69%; /* #FF6F61 */
+    --accent-foreground: 0 0% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 257 100% 90%;
@@ -43,8 +43,8 @@
     --secondary-foreground: 5 100% 15%;
     --muted: 240 10% 12%;
     --muted-foreground: 0 0% 60%;
-    --accent: 51 100% 60%; /* Lighter gold for dark mode */
-    --accent-foreground: 51 100% 10%;
+    --accent: 5 100% 75%; /* Lighter coral for dark mode */
+    --accent-foreground: 5 100% 15%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 10% 15%;
