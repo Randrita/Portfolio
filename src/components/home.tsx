@@ -55,14 +55,14 @@ export default function HomeComponent() {
           <div className="space-y-8">
             {content.experience.map((exp, index) => (
               <div key={index} className="relative flex items-start">
-                 <div className="flex-shrink-0 w-8 flex justify-center">
+                 <div className="flex-shrink-0 w-8 flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full bg-primary ring-4 ring-background z-10 mt-1"></div>
                  </div>
                 <div className="ml-4 flex-grow">
                   <Card>
                     <CardHeader className="pb-4">
                       <CardTitle className="text-lg font-semibold">{exp.role}</CardTitle>
-                      <CardDescription>{exp.company} | {exp.duration}</CardDescription>
+                      <CardDescription>{exp.company}</CardDescription>
                     </CardHeader>
                     {exp.description && (
                       <CardContent>
@@ -70,6 +70,9 @@ export default function HomeComponent() {
                       </CardContent>
                     )}
                   </Card>
+                </div>
+                <div className="absolute left-8 top-1/2 -translate-y-1/2 -translate-x-full pr-4">
+                  <span className="bg-background text-muted-foreground text-sm px-2 py-1 rounded-md">{exp.duration}</span>
                 </div>
               </div>
             ))}
