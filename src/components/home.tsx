@@ -19,7 +19,9 @@ const skillIcons: { [key: string]: React.ReactNode } = {
   "Kafka": <Server className="h-5 w-5" />,
   "Spark Streaming": <Cpu className="h-5 w-5" />,
   "GCP": <Cloud className="h-5 w-5" />,
-  "AI": <BrainCircuit className="h-5 w-5" />
+  "AI": <BrainCircuit className="h-5 w-5" />,
+  "Snowflake": <Database className="h-5 w-5" />,
+  "Grafana": <BarChart className="h-5 w-5" />
 };
 
 export default function HomeComponent() {
