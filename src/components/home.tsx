@@ -51,18 +51,22 @@ export default function HomeComponent() {
         <h2 className="text-3xl font-bold font-headline text-center mb-2">Work Experience</h2>
         <p className="text-center text-muted-foreground mb-12">My professional journey and key roles over the years.</p>
         <div className="relative max-w-2xl mx-auto">
-          <div className="absolute left-0 top-0 h-full w-px bg-border ml-3.5" aria-hidden="true"></div>
+          <div className="absolute left-0 sm:left-1/2 top-0 h-full w-px bg-border sm:translate-x-[-0.5px]"></div>
           <div className="space-y-8">
             {content.experience.map((exp, index) => (
-              <div key={index} className="relative flex items-start">
-                 <div className="flex-shrink-0 w-8 flex flex-col items-center">
-                    <div className="w-4 h-4 rounded-full bg-primary ring-4 ring-background z-10 mt-1"></div>
-                 </div>
-                <div className="ml-4 flex-grow">
+              <div key={index} className="relative flex items-start sm:grid sm:grid-cols-2 sm:gap-x-8">
+                <div className={`flex-shrink-0 w-8 sm:w-auto flex flex-col items-center sm:items-end ${index % 2 === 0 ? 'sm:order-2' : ''}`}>
+                  <div className="hidden sm:block text-right mb-2">
+                    <span className="bg-background text-muted-foreground text-sm px-2 py-1 rounded-md">{exp.duration}</span>
+                  </div>
+                  <div className="w-4 h-4 rounded-full bg-primary ring-4 ring-background z-10 mt-1 sm:mt-0"></div>
+                </div>
+                <div className={`ml-4 sm:ml-0 flex-grow ${index % 2 === 0 ? 'sm:order-1 sm:text-right' : ''}`}>
                   <Card>
                     <CardHeader className="pb-4">
                       <CardTitle className="text-lg font-semibold">{exp.role}</CardTitle>
                       <CardDescription>{exp.company}</CardDescription>
+                      <span className="sm:hidden text-xs text-muted-foreground pt-1">{exp.duration}</span>
                     </CardHeader>
                     {exp.description && (
                       <CardContent>
@@ -70,9 +74,6 @@ export default function HomeComponent() {
                       </CardContent>
                     )}
                   </Card>
-                </div>
-                <div className="absolute left-8 top-1/2 -translate-y-1/2 -translate-x-full pr-4">
-                  <span className="bg-background text-muted-foreground text-sm px-2 py-1 rounded-md">{exp.duration}</span>
                 </div>
               </div>
             ))}
