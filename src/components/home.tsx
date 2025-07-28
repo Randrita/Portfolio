@@ -26,7 +26,7 @@ export default function HomeComponent() {
   return (
     <div className="space-y-12">
       <section className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-        <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-primary">
+        <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-secondary">
           <AvatarImage src={content.avatar.src} alt={content.avatar.alt} data-ai-hint={content.avatar.hint} />
           <AvatarFallback>{content.avatar.fallback}</AvatarFallback>
         </Avatar>
