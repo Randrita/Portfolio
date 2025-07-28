@@ -70,7 +70,7 @@ export default function HomeComponent() {
           </CardHeader>
           <CardContent className="flex flex-wrap gap-2">
             {content.skills.map(skill => (
-              <div key={skill} className="flex items-center gap-2 bg-primary/10 text-primary font-medium text-sm px-3 py-1 rounded-full transition-colors hover:bg-secondary hover:text-secondary-foreground">
+              <div key={skill} className="flex items-center gap-2 bg-primary/10 text-primary-foreground font-medium text-sm px-3 py-1 rounded-full transition-colors hover:bg-secondary hover:text-secondary-foreground">
                 {skillIcons[skill] || <Code className="h-5 w-5" />}
                 <span>{skill}</span>
               </div>
