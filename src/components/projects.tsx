@@ -1,64 +1,87 @@
 import Image from 'next/image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from './ui/button';
+
+const projects = [
+  {
+    title: 'recognAIse',
+    description: "Web application converting handwritten documents to digital copy with automatic annotation feature to enable seemless and hassle free digital document management. The project was chosen as one of the best project in “HACKODISHA” and won the title of “BEST GIRLS TEAM”",
+    techStack: 'OpenCV, Pytessaract, Numpy',
+    link: '#', // Add repository link here
+    image: 'https://placehold.co/600x400.png',
+    hint: 'document analysis'
+  },
+  {
+    title: 'Face Mesh App',
+    description: "A web application, creating mask effects and retouching over a 'face mesh'. Users may verify this mesh by uploading photos or videos, as well as by turning on their camera directly. The project is added in official weekly round-up of STREAMLIT.",
+    techStack: 'OpenCV, Numpy, Mediapipe, Streamlit',
+    link: '#', // Add repository link here
+    image: 'https://placehold.co/600x400.png',
+    hint: 'facial recognition'
+  },
+  {
+    title: 'Document Search Engine Over Private Networks',
+    description: "An enterprise network document search engine. Whitelisted directory indexing in an enterprise network and near real-time documents search. It auto-correlates files based on their type in order to give a seamless experience while searching documents in a large network.",
+    techStack: 'Python, Flask, Elasticsearch', // Assuming tech stack
+    link: '#', // Add repository link here
+    image: 'https://placehold.co/600x400.png',
+    hint: 'search engine'
+  },
+  {
+    title: 'Ship Identification and Tracking via Satellite Imagery',
+    description: "Ocean images are analysed to track ships over satellite images. Convolutional Neural Network (CNNs) are used purely without any transfer learning for detection.",
+    techStack: 'Python, TensorFlow/Keras, OpenCV', // Assuming tech stack
+    link: '#', // Add repository link here
+    image: 'https://placehold.co/600x400.png',
+    hint: 'satellite imagery'
+  },
+];
 
 export default function ProjectsComponent() {
   return (
     <section>
       <h2 className="text-3xl font-bold font-headline text-center mb-8">My Work</h2>
-      <div className="max-w-sm mx-auto">
-        <Dialog>
-          <DialogTrigger asChild>
-            <Card className="cursor-pointer hover:shadow-lg transition-shadow group">
-              <div className="overflow-hidden rounded-t-lg">
-                <Image 
-                  src="https://placehold.co/600x400.png" 
-                  alt="Project Header" 
-                  width={600} 
-                  height={400} 
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300" 
-                  data-ai-hint="abstract technology"
-                />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {projects.map((project, index) => (
+          <Dialog key={index}>
+            <DialogTrigger asChild>
+              <Card className="cursor-pointer hover:shadow-lg transition-shadow group">
+                <div className="overflow-hidden rounded-t-lg">
+                  <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    width={600} 
+                    height={400} 
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" 
+                    data-ai-hint={project.hint}
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>{project.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground truncate">{project.description}</p>
+                </CardContent>
+              </Card>
+            </DialogTrigger>
+            <DialogContent className="max-w-2xl">
+              <DialogHeader>
+                <DialogTitle>{project.title}</DialogTitle>
+              </DialogHeader>
+              <div className="mt-4 prose prose-sm max-w-none dark:prose-invert">
+                <p>{project.description}</p>
+                <h3 className="font-semibold mt-4">Technology Stack:</h3>
+                <p>{project.techStack}</p>
+                {project.link && project.link !== '#' && (
+                  <Button asChild className="mt-4">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">View Repository</a>
+                  </Button>
+                )}
               </div>
-              <CardHeader>
-                <CardTitle>AI-Powered Content Generation Tool</CardTitle>
-              </CardHeader>
-            </Card>
-          </DialogTrigger>
-          <DialogContent className="max-w-2xl">
-            <DialogHeader>
-              <DialogTitle>AI-Powered Content Generation Tool</DialogTitle>
-            </DialogHeader>
-            <Tabs defaultValue="details" className="w-full mt-4">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="details">Project Details & Requirements</TabsTrigger>
-                <TabsTrigger value="steps">Steps</TabsTrigger>
-              </TabsList>
-              <TabsContent value="details" className="mt-4 prose prose-sm max-w-none">
-                <p>This project is a web application that leverages a fine-tuned language model to generate marketing copy, blog post ideas, and social media updates. The goal is to provide a simple, intuitive interface for content creators to overcome writer's block and accelerate their workflow.</p>
-                <h3 className="font-semibold mt-4">Requirements:</h3>
-                <ul className="list-disc pl-5">
-                  <li>React/Next.js for the frontend.</li>
-                  <li>Python/Flask for the backend API.</li>
-                  <li>Hugging Face Transformers for model interaction.</li>
-                  <li>Firebase for user authentication and data storage.</li>
-                  <li>Stripe for subscription management.</li>
-                </ul>
-              </TabsContent>
-              <TabsContent value="steps" className="mt-4">
-                <ol className="list-decimal list-inside space-y-3">
-                  <li><strong>Setup Backend API:</strong> Develop a Flask API to handle requests, process input, and interact with the language model.</li>
-                  <li><strong>Fine-tune Language Model:</strong> Use a base model (e.g., GPT-2, T5) and fine-tune it on a custom dataset of high-quality marketing copy.</li>
-                  <li><strong>Build Frontend Interface:</strong> Create a clean user interface using Next.js and shadcn/ui components for input forms and displaying generated content.</li>
-                  <li><strong>Implement User Authentication:</strong> Integrate Firebase Authentication to manage user accounts and protect routes.</li>
-                  <li><strong>Deploy Application:</strong> Containerize the services using Docker and deploy to a cloud platform like Google Cloud Run or Vercel.</li>
-                  <li><strong>Add Subscription Logic:</strong> Integrate Stripe to handle monthly subscriptions for premium features.</li>
-                </ol>
-              </TabsContent>
-            </Tabs>
-          </DialogContent>
-        </Dialog>
+            </DialogContent>
+          </Dialog>
+        ))}
       </div>
     </section>
   );
