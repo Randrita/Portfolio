@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from './ui/button';
 import content from '@/content.json';
 import ADKInstructions from './adk-instructions';
+import { Badge } from './ui/badge';
+import { ArrowRight } from 'lucide-react';
 
 const componentMap: { [key: string]: React.ComponentType } = {
   ADKInstructions,
@@ -12,14 +14,15 @@ const componentMap: { [key: string]: React.ComponentType } = {
 export default function PublicTalksComponent() {
   return (
     <section>
-      <h2 className="text-3xl font-bold font-headline text-center mb-8">Public Talks</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h2 className="text-3xl font-bold font-headline text-center mb-12">Public Talks</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {content.public_talks.map((talk, index) => {
           const TalkComponent = talk.component ? componentMap[talk.component] : null;
+          const techStackArray = talk.techStack.split(', ');
           return (
             <Dialog key={index}>
               <DialogTrigger asChild>
-                <Card className="cursor-pointer hover:shadow-lg transition-shadow group">
+                <Card className="flex flex-col cursor-pointer group">
                   <div className="overflow-hidden rounded-t-lg">
                     <Image 
                       src={talk.image} 
@@ -33,9 +36,19 @@ export default function PublicTalksComponent() {
                   <CardHeader>
                     <CardTitle>{talk.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground truncate">{talk.description}</p>
+                  <CardContent className="flex-grow space-y-4">
+                    <p className="text-sm text-muted-foreground line-clamp-3">{talk.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {techStackArray.map(tech => (
+                          <Badge key={tech} variant="secondary">{tech}</Badge>
+                      ))}
+                    </div>
                   </CardContent>
+                  <CardFooter>
+                      <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                          View Details <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                  </CardFooter>
                 </Card>
               </DialogTrigger>
               <DialogContent className="max-w-lg md:max-w-2xl">
