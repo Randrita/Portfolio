@@ -4,6 +4,7 @@ import ProjectsComponent from '@/components/projects';
 import content from '@/content.json';
 import { ThemeSwitcher } from '@/components/theme-switcher';
 import PublicTalksComponent from '@/components/public-talks';
+import { Terminal } from 'lucide-react';
 
 export default function PortfolioPage() {
   return (
@@ -12,7 +13,7 @@ export default function PortfolioPage() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-primary/50 rounded-full flex items-center justify-center">
-              <span className="text-lg font-bold text-primary-foreground dark:text-white">{content.avatar.fallback}</span>
+              <Terminal className="w-5 h-5 text-primary-foreground dark:text-white" />
             </div>
             <h1 className="text-xl sm:text-2xl font-bold font-headline tracking-tight">{content.name}</h1>
           </div>
