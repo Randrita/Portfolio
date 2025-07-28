@@ -48,13 +48,37 @@
       "company": "Tata Consultancy Services",
       "role": "Assistant System Engineer",
       "duration": "Feb 2024 - Aug 2024",
-      "description": "Developed a seamless query tool using ServiceNow."
+      "description": ""
     },
     {
       "company": "Statts CyberSecurity Solutions",
       "role": "Data Analyst",
       "duration": "Feb 2023 - Feb 2024",
-      "description": "Performed exploratory data analysis using Python libraries, Power BI, and MS Excel."
+      "description": ""
+    },
+    {
+      "company": "Techfastly",
+      "role": "Generative AI Researcher",
+      "duration": "Aug 2021 - Jan 2023",
+      "description": ""
+    },
+    {
+      "company": "ZERON",
+      "role": "AI Researcher",
+      "duration": "Oct 2022 - Nov 2022",
+      "description": ""
+    },
+    {
+      "company": "Code Karo Yaaro",
+      "role": "Machine Learning Intern",
+      "duration": "Aug 2021 - Oct 2021",
+      "description": ""
+    },
+    {
+      "company": "TeamCognito",
+      "role": "Design Specialist",
+      "duration": "Jul 2020 - Jun 2021",
+      "description": ""
     }
   ],
   "achievements": [
