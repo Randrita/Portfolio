@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, Cpu, Database, Code, Cloud, BrainCircuit, BarChart, Server } from 'lucide-react';
+import { Github, Linkedin, Instagram, Cpu, Database, Code, Cloud, BrainCircuit, BarChart, Server, GraduationCap } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -66,15 +66,24 @@ export default function HomeComponent() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <section>
-          <Card className="h-full">
+        <Card className="h-full">
             <CardHeader>
               <CardTitle>Education</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-6">
               {content.education.map((edu, index) => (
-                <div key={index}>
-                  <h3 className="font-semibold">{edu.institution}</h3>
-                  <p className="text-sm text-muted-foreground whitespace-pre-wrap">{edu.details}</p>
+                <div key={index} className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <GraduationCap className="h-8 w-8 text-primary" />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="font-semibold">{edu.institution}</h3>
+                    <p className="text-sm">{edu.degree}</p>
+                    <div className="flex justify-between text-sm text-muted-foreground mt-1">
+                      <span>{edu.grade}</span>
+                      <span>{edu.duration}</span>
+                    </div>
+                  </div>
                 </div>
               ))}
             </CardContent>

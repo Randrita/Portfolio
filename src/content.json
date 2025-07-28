@@ -15,7 +15,9 @@
   "education": [
     {
       "institution": "B.P. Poddar Institute of Management and Technology",
-      "details": "B.Tech in Information Technology | CGPA: 9.38/10 | 2019 - 2023"
+      "degree": "B.Tech in Information Technology",
+      "grade": "CGPA: 9.38/10",
+      "duration": "2019 - 2023"
     }
   ],
   "skills": [
