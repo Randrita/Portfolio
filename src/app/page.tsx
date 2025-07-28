@@ -23,8 +23,8 @@ export default function PortfolioPage() {
         <Tabs defaultValue="home" className="w-full">
           <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto bg-transparent">
             <TabsTrigger value="home">HOME</TabsTrigger>
-            <TabsTrigger value="projects">Projects</TabsTrigger>
-            <TabsTrigger value="talks">Public Talks</TabsTrigger>
+            <TabsTrigger value="projects">PROJECTS</TabsTrigger>
+            <TabsTrigger value="talks">PUBLIC TALKS</TabsTrigger>
           </TabsList>
           <TabsContent value="home" className="mt-8">
             <HomeComponent />
