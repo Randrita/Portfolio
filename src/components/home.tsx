@@ -50,38 +50,6 @@ export default function HomeComponent() {
       <section>
         <Card>
           <CardHeader>
-            <CardTitle>Education</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {content.education.map((edu, index) => (
-              <div key={index}>
-                <h3 className="font-semibold">{edu.institution}</h3>
-                <p className="text-sm text-muted-foreground whitespace-pre-wrap">{edu.details}</p>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      </section>
-      
-      <section>
-        <Card>
-          <CardHeader>
-            <CardTitle>Skills</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-wrap gap-2">
-            {content.skills.map(skill => (
-              <div key={skill} className="flex items-center gap-2 bg-primary/10 text-primary-foreground dark:bg-[#6A0DAD]/70 dark:text-white font-medium text-sm px-3 py-1 rounded-full transition-colors hover:bg-secondary hover:text-secondary-foreground dark:hover:bg-[#580A8D]">
-                {skillIcons[skill] || <Code className="h-5 w-5" />}
-                <span>{skill}</span>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-      </section>
-
-      <section>
-        <Card>
-          <CardHeader>
             <CardTitle>Experience</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -95,6 +63,40 @@ export default function HomeComponent() {
           </CardContent>
         </Card>
       </section>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <section>
+          <Card className="h-full">
+            <CardHeader>
+              <CardTitle>Education</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {content.education.map((edu, index) => (
+                <div key={index}>
+                  <h3 className="font-semibold">{edu.institution}</h3>
+                  <p className="text-sm text-muted-foreground whitespace-pre-wrap">{edu.details}</p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </section>
+
+        <section>
+          <Card className="h-full">
+            <CardHeader>
+              <CardTitle>Skills</CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-wrap gap-2">
+              {content.skills.map(skill => (
+                <div key={skill} className="flex items-center gap-2 bg-primary/10 text-primary-foreground dark:bg-[#6A0DAD]/70 dark:text-white font-medium text-sm px-3 py-1 rounded-full transition-colors hover:bg-secondary hover:text-secondary-foreground dark:hover:bg-[#580A8D]">
+                  {skillIcons[skill] || <Code className="h-5 w-5" />}
+                  <span>{skill}</span>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+        </section>
+      </div>
 
       <section>
         <Card>
