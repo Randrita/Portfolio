@@ -95,9 +95,9 @@
     },
     {
       "title": "recognAIse",
-      "description": "A web application that converts handwritten documents into digital text with an automatic annotation feature to enable seamless and hassle-free digital document management. This project was chosen as one of the best projects in 'HACKODISHA' and won the title of 'BEST GIRLS TEAM'.",
+      "description": "An Optical Character Recognition (OCR) based web-application that can convert hand-written documents into digital text with an automatic annotation feature to enable a seamless and hassle-free digital document management. This project was chosen as one of the best projects in 'HACKODISHA' and won the title of 'BEST GIRLS TEAM'.",
       "techStack": "OpenCV, Pytesseract, Numpy",
-      "link": "#",
+      "link": "https://github.com/Randrita/recognAIse",
       "image": "https://placehold.co/600x400.png",
       "hint": "document analysis"
     },
