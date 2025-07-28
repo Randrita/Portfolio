@@ -60,14 +60,14 @@ export default function ADKInstructions() {
     }
   };
 
-  const progress = (completedSteps.length / steps.length) * 100;
+  const progress = 100;
 
   return (
     <div className="w-full space-y-6 p-2">
        <div>
         <div className="flex justify-between items-center mb-2">
             <span className="text-sm font-medium text-muted-foreground">Progress</span>
-            <span className="text-sm font-bold text-primary">{Math.round(progress)}%</span>
+            <span className="text-sm font-bold text-primary">{progress}%</span>
         </div>
         <Progress value={progress} className="w-full h-2" />
       </div>
