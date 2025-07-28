@@ -50,7 +50,7 @@ export default function HomeComponent() {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <section>
         <Card>
           <CardHeader>
             <CardTitle>Experience</CardTitle>
@@ -66,6 +66,9 @@ export default function HomeComponent() {
             </div>
           </CardContent>
         </Card>
+      </section>
+
+      <section>
         <Card>
           <CardHeader>
             <CardTitle>Achievements</CardTitle>
