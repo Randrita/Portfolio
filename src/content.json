@@ -41,32 +41,27 @@
     {
       "company": "Infosys",
       "role": "Big Data Engineer",
-      "duration": "Aug 2024 - Present",
-      "description": ""
+      "duration": "Aug 2024 - Present"
     },
     {
       "company": "Tata Consultancy Services",
       "role": "Associate",
-      "duration": "Feb 2024 - Aug 2024",
-      "description": ""
+      "duration": "Feb 2024 - Aug 2024"
     },
     {
       "company": "Statts CyberSecurity Solutions",
       "role": "Data Analyst",
-      "duration": "Feb 2023 - Feb 2024",
-      "description": ""
+      "duration": "Feb 2023 - Feb 2024"
     },
     {
       "company": "Techfastly",
       "role": "Generative AI Researcher",
-      "duration": "Aug 2021 - Jan 2023",
-      "description": ""
+      "duration": "Aug 2021 - Jan 2023"
     },
     {
       "company": "ZERON",
       "role": "AI Researcher",
-      "duration": "Oct 2022 - Nov 2022",
-      "description": ""
+      "duration": "Oct 2022 - Nov 2022"
     }
   ],
   "achievements": [
@@ -89,6 +84,15 @@
     }
   ],
   "projects": [
+    {
+      "title": "AI to Prod Without Losing Sleep: Meet ADK + Cloud Run",
+      "description": "Step-by-step instructions on deploying an AI application using the App Development Kit (ADK) and Cloud Run.",
+      "techStack": "ADK, Google Cloud Run, Genkit",
+      "link": "#",
+      "image": "https://placehold.co/600x400.png",
+      "hint": "cloud deployment",
+      "component": "ADKInstructions"
+    },
     {
       "title": "recognAIse",
       "description": "A web application that converts handwritten documents into digital text with an automatic annotation feature to enable seamless and hassle-free digital document management. This project was chosen as one of the best projects in 'HACKODISHA' and won the title of 'BEST GIRLS TEAM'.",
