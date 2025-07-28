@@ -1,8 +1,8 @@
 {
   "name": "Randrita Sarkar",
-  "tagline": "A young mind ready to embrace a steep learning curve",
+  "tagline": "A young mind ready to embrace a steep learning curve.",
   "avatar": {
-    "src": "https://placehold.co/200x200.png",
+    "src": "https://avatars.githubusercontent.com/u/60352282?v=4",
     "alt": "Randrita Sarkar",
     "fallback": "RS",
     "hint": "professional portrait"
@@ -43,7 +43,7 @@
       "company": "Tata Consultancy Services",
       "role": "Assistant System Engineer",
       "duration": "Feb 2024 - Aug 2024",
-      "description": "Responsible for developing a seamless query tool using ServiceNow."
+      "description": "Developed a seamless query tool using ServiceNow."
     },
     {
       "company": "Statts CyberSecurity Solutions",
@@ -74,7 +74,7 @@
   "projects": [
     {
       "title": "recognAIse",
-      "description": "A web application that converts handwritten documents into digital text with an automatic annotation feature to enable seamless and hassle-free digital document management. This project was chosen as one of the best projects in “HACKODISHA” and won the title of “BEST GIRLS TEAM”",
+      "description": "A web application that converts handwritten documents into digital text with an automatic annotation feature to enable seamless and hassle-free digital document management. This project was chosen as one of the best projects in 'HACKODISHA' and won the title of 'BEST GIRLS TEAM'.",
       "techStack": "OpenCV, Pytesseract, Numpy",
       "link": "#",
       "image": "https://placehold.co/600x400.png",
