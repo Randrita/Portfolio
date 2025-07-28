@@ -1,0 +1,97 @@
+{
+  "name": "Randrita Sarkar",
+  "tagline": "A young mind ready to face a learning curve",
+  "avatar": {
+    "src": "https://placehold.co/200x200.png",
+    "alt": "Randrita Sarkar",
+    "fallback": "RS",
+    "hint": "professional portrait"
+  },
+  "contact": {
+    "email": "randritas@gmail.com",
+    "phone": "+917980773303",
+    "github": "https://github.com/Randrita",
+    "linkedin": "https://www.linkedin.com/in/randritas"
+  },
+  "education": [
+    {
+      "institution": "B.P. Poddar Institute of Management and Technology",
+      "details": "B.Tech in Information Technology | CGPA: 9.38/10 | 2019 - 2023"
+    },
+    {
+      "institution": "Dum Dum Road Govt. Sponsored High School for Girls",
+      "details": "WBCHSE (Class XII), Aggregate: 72% | 2016 - 2018\nWBBSE (Class X), Aggregate: 88% | 2015 - 2016"
+    }
+  ],
+  "skills": [
+    "Python", "PySpark", "DBMS(SQL)", "Unix Tools", "Unix Shell Scripting", "Java",
+    "Git", "EDA", "Machine Learning", "Power BI", "Deep Learning (CNN)", "Kafka", "Spark Streaming"
+  ],
+  "experience": [
+    {
+      "company": "Tata Consultancy Services",
+      "role": "Assistant System Engineer",
+      "duration": "Feb 2024 - Aug 2024",
+      "description": "Responsible in developing seamless query tool using servicenow."
+    },
+    {
+      "company": "Statts CyberSecurity Solutions",
+      "role": "Data Analyst",
+      "duration": "Feb 2023 - Feb 2024",
+      "description": "Responsible in performing exploratory data analysis using python libraries, power BI and MS Excel."
+    }
+  ],
+  "achievements": [
+    "Secured 1st runner-up position in HackFest 2022 organised by IIT(ISM) Dhanbad.",
+    "Secured 1st runner-up position in Technovation 2022 organised by Heritage Institute of Technology, Kolkata.",
+    "Secured 2nd runner-up position in YOUNG ENGINEERS AWARD 2022 organised by IET Kolkata Local Network.",
+    "Selected as a Problem Setter for the inter college coding competition, SMARTCODER 2.22.",
+    "Invited as a Speaker multiple times by GOOGLE DEVELOPERS GROUPS.",
+    "Secured 1st position Twice in intra-college poster making competition."
+  ],
+  "publications": [
+    {
+      "title": "Breast Cancer Detection using Transfer Learning Techniques in Convolutional Neural Networks",
+      "conference": "7th International Conference EAIT'22"
+    },
+    {
+      "title": "Sentiment Analysis on Twitter Data: A Comparative Approach",
+      "doi": "DOI: 10.47760/ijcsma.2021.v09i10.001",
+      "link": "https://doi.org/10.47760/ijcsma.2021.v09i10.001"
+    }
+  ],
+  "projects": [
+    {
+      "title": "recognAIse",
+      "description": "Web application converting handwritten documents to digital copy with automatic annotation feature to enable seemless and hassle free digital document management. The project was chosen as one of the best project in “HACKODISHA” and won the title of “BEST GIRLS TEAM”",
+      "techStack": "OpenCV, Pytessaract, Numpy",
+      "link": "#",
+      "image": "https://placehold.co/600x400.png",
+      "hint": "document analysis"
+    },
+    {
+      "title": "Face Mesh App",
+      "description": "A web application, creating mask effects and retouching over a 'face mesh'. Users may verify this mesh by uploading photos or videos, as well as by turning on their camera directly. The project is added in official weekly round-up of STREAMLIT.",
+      "techStack": "OpenCV, Numpy, Mediapipe, Streamlit",
+      "link": "#",
+      "image": "https://placehold.co/600x400.png",
+      "hint": "facial recognition"
+    },
+    {
+      "title": "Document Search Engine Over Private Networks",
+      "description": "An enterprise network document search engine. Whitelisted directory indexing in an enterprise network and near real-time documents search. It auto-correlates files based on their type in order to give a seamless experience while searching documents in a large network.",
+      "techStack": "Python, Flask, Elasticsearch",
+      "link": "#",
+      "image": "https://placehold.co/600x400.png",
+      "hint": "search engine"
+    },
+    {
+      "title": "Ship Identification and Tracking via Satellite Imagery",
+      "description": "Ocean images are analysed to track ships over satellite images. Convolutional Neural Network (CNNs) are used purely without any transfer learning for detection.",
+      "techStack": "Python, TensorFlow/Keras, OpenCV",
+      "link": "#",
+      "image": "https://placehold.co/600x400.png",
+      "hint": "satellite imagery"
+    }
+  ]
+}
