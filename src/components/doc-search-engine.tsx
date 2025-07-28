@@ -1,7 +1,8 @@
 "use client";
 
-import { CheckCircle, Layers, FileSearch, Zap, ShieldCheck } from 'lucide-react';
+import { CheckCircle, Layers, FileSearch, Zap, ShieldCheck, Github } from 'lucide-react';
 import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 
 const features = [
     { text: "Enterprise search engine for documents on a private network.", icon: <FileSearch className="h-5 w-5 text-primary" /> },
@@ -18,7 +19,7 @@ export default function DocSearchEngineComponent() {
       <div>
         <h3 className="text-lg font-semibold">Overview</h3>
         <p className="text-sm text-muted-foreground mt-2">
-            An enterprise search engine for documents on a private network. It features whitelisted directory indexing and near real-time document search, automatically correlating files by type for a seamless experience.
+            An enterprise search engine for documents on a private network. It features whitelisted directory indexing and near real-time document search, automatically correlating files by type for a seamless experience. This project uses a custom script to automatically correlate files and their types, providing a seamless experience without needing an active internet connection.
         </p>
       </div>
 
@@ -44,6 +45,15 @@ export default function DocSearchEngineComponent() {
                 <Badge key={tech} variant="secondary">{tech}</Badge>
             ))}
         </div>
+      </div>
+      
+      <div className="flex justify-end pt-4">
+        <Button asChild>
+          <a href="https://github.com/Randrita/Document_Search_Engine" target="_blank" rel="noopener noreferrer">
+            <Github className="mr-2 h-4 w-4" />
+            View on GitHub
+          </a>
+        </Button>
       </div>
     </div>
   );

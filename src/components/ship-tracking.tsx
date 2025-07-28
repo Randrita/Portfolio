@@ -1,7 +1,8 @@
 "use client";
 
-import { BrainCircuit, Layers, Satellite, Ship } from 'lucide-react';
+import { BrainCircuit, Layers, Satellite, Ship, Github } from 'lucide-react';
 import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 
 const features = [
     { text: "Analyzes ocean satellite imagery to detect ships.", icon: <Satellite className="h-5 w-5 text-primary" /> },
@@ -17,7 +18,7 @@ export default function ShipTrackingComponent() {
       <div>
         <h3 className="text-lg font-semibold">Overview</h3>
         <p className="text-sm text-muted-foreground mt-2">
-            Analyzes ocean satellite imagery to detect and track ships. This project uses a Convolutional Neural Network (CNN) built from scratch, without transfer learning.
+            A deep-learning project to analyze the satellite imagery of the ocean and detect the ships and also track them. This project uses a Convolutional Neural Network (CNN) trained from scratch on the Kaggle dataset 'Satellite-imagery-of-ships'.
         </p>
       </div>
 
@@ -43,6 +44,15 @@ export default function ShipTrackingComponent() {
                 <Badge key={tech} variant="secondary">{tech}</Badge>
             ))}
         </div>
+      </div>
+
+      <div className="flex justify-end pt-4">
+        <Button asChild>
+          <a href="https://github.com/Randrita/Ship-Identification-and-Tracking-via-Satellite-Imagery" target="_blank" rel="noopener noreferrer">
+            <Github className="mr-2 h-4 w-4" />
+            View on GitHub
+          </a>
+        </Button>
       </div>
     </div>
   );

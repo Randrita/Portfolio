@@ -95,27 +95,27 @@
     },
     {
       "title": "Face Mesh App",
-      "description": "A computer vision project that creates mask effects and provides retouching over a 'face mesh'. Users can verify this mesh by uploading their own photos or videos, or by using their camera directly. This project was featured in the official weekly round-up of STREAMLIT.",
+      "description": "A web application that creates mask effects and provides retouching over a 'face mesh'. Users can verify this mesh by uploading photos or videos, or by using their camera directly. This project was featured in the official weekly round-up of STREAMLIT.",
       "techStack": "OpenCV, Numpy, Mediapipe, Streamlit",
-      "link": "#",
+      "link": "https://github.com/Randrita/Face-Mesh-App",
       "image": "https://placehold.co/600x400.png",
       "hint": "facial recognition",
       "component": "FaceMeshApp"
     },
     {
       "title": "Document Search Engine Over Private Networks",
-      "description": "An enterprise search engine for documents on a private network, featuring whitelisted directory indexing and near real-time document search. It automatically correlates files by type, providing a seamless experience without needing an active internet connection.",
+      "description": "An enterprise search engine for documents on a private network. It features whitelisted directory indexing and near real-time document search, automatically correlating files by type for a seamless experience. This project uses a custom script to automatically correlate files and their types, providing a seamless experience without needing an active internet connection.",
       "techStack": "Python, Flask, Elasticsearch",
-      "link": "#",
+      "link": "https://github.com/Randrita/Document_Search_Engine",
       "image": "https://placehold.co/600x400.png",
       "hint": "search engine",
       "component": "DocSearchEngine"
     },
     {
       "title": "Ship Identification and Tracking via Satellite Imagery",
-      "description": "A deep learning project to analyze ocean satellite imagery for ship detection and tracking. This project uses a Convolutional Neural Network (CNN) trained from scratch on the Kaggle dataset 'Satellite-imagery-of-ships'.",
+      "description": "A deep-learning project to analyze the satellite imagery of the ocean and detect the ships and also track them. This project uses a Convolutional Neural Network (CNN) trained from scratch on the Kaggle dataset 'Satellite-imagery-of-ships'.",
       "techStack": "Python, TensorFlow/Keras, OpenCV",
-      "link": "#",
+      "link": "https://github.com/Randrita/Ship-Identification-and-Tracking-via-Satellite-Imagery",
       "image": "https://placehold.co/600x400.png",
       "hint": "satellite imagery",
       "component": "ShipTracking"
