@@ -84,7 +84,7 @@ export default function HomeComponent() {
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
         <section>
-        <Card className="h-full">
+          <Card className="h-full">
             <CardHeader>
               <CardTitle>Education</CardTitle>
             </CardHeader>
